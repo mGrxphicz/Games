@@ -1,3 +1,7 @@
+//I get errors can you help me fix it?
+
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
