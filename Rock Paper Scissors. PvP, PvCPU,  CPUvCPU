@@ -1,0 +1,689 @@
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main () {
+
+ srand(time(NULL));
+
+  bool Game1, Game2, Game3;
+  int game;
+  int retry;
+  int p1, p2;
+  int cpu1, cpu2;
+  int score_p1=0, score_p2=0, score_cpu1=0, score_cpu2=0;
+  int move_p1, move_p2;
+  int move_cpu1= rand() % 2;
+  int move_cpu2= rand() % 2;
+
+    cout<<"-----------------------------------------------------------------------------------------\n";
+    cout<<"-Welcome to my awesome -> Rock, Paper, Scissors <- game!                                -\n";
+    cout<<"-There are 3 modes! Player vs. Pc, Player vs. Player, and Pc vs. Pc, Press 4 to exit.   -\n";
+    cout<<"-Now, choose gamemode. Type 1 for Player vs Pc, 2 for Player vs Player, 3 for Pc vs Pc: ";
+     cin>>game;
+    cout<<"                                                                                        -\n";
+    cout<<"Nice. Have fun!\n";
+    cout<<"-----------------------------------------------------------------------------------------\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"\n";
+
+        if (game==1) {
+
+            Game1=true;
+
+        }
+
+            while (Game1==true) {
+
+                    cout<<"Welcome to Player vs Computer! Type 1 to use Rock, 2 for Paper, and 3 for Scissors: ";
+                    cin>>move_p1;
+                    cout<<"Score: "<<score_p1<<" - "<<score_cpu1<<"\n";
+
+                    move_cpu1= rand() % 2;
+
+                    if (move_p1==1 && move_cpu1==0) {
+
+                        cout<<"You both chose Rock! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                    }
+
+                        if (move_p1==2 && move_cpu1==1) {
+
+                        cout<<"You both chose Paper! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                    }
+
+                      if (move_p1==3 && move_cpu1==2) {
+
+                        cout<<"You both chose Scissors! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                    }
+
+                     if (move_p1==1 && move_cpu1==1) {
+
+                        cout<<"Your opponent chose Paper while you chose Rock! You lose. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                    }
+
+
+                     if (move_p1==1 && move_cpu1==2) {
+
+                        cout<<"Your opponent chose Scissors while you chose Rock! You Win. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                     }
+                     if (move_p1==2 && move_cpu1==0) {
+
+                        cout<<"Your opponent chose Rock while you chose Paper! You win. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                     }
+                     if (move_p1==2 && move_cpu1==2) {
+
+                        cout<<"Your opponent chose Scissors while you chose Paper! You lose. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+                     }
+
+                     if (move_p1==3 && move_cpu1==0) {
+
+                        cout<<"Your opponent chose Rock while you chose Scissors! You lose. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                     }
+                     if (move_p1==3 && move_cpu1==1) {
+
+                        cout<<"Your opponent chose Paper while you chose Scissors! You win. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game1=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game1=false;
+
+                        }
+
+                     }
+
+                    }
+
+
+
+
+
+
+                    if (game==2) {
+
+                        Game2=true;
+
+                        }
+
+
+                       while (Game2==true) {
+
+                    cout<<"Welcome to Player vs Player! Player 1, Type 1 to use Rock, 2 for Paper, and 3 for Scissors: ";
+                    cin>>move_p1;
+                    cout<<"Player 2, Type your move: ";
+                    cin>>move_p2;
+                    cout<<"\n";
+                    cout<<"Score: "<<score_p1<<" - "<<score_p2<<"\n";
+
+
+                    if (move_p1==1 && move_p2==1) {
+
+                        cout<<"You both chose Rock! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                    }
+
+                        if (move_p1==2 && move_p2==2) {
+
+                        cout<<"You both chose Paper! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                    }
+
+                      if (move_p1==3 && move_p2==3) {
+
+                        cout<<"You both chose Scissors! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                    }
+
+                     if (move_p1==1 && move_p2==2) {
+
+                        cout<<"Player 1 chose Rock while Player 2 chose Paper! Player 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                    }
+
+
+                     if (move_p1==1 && move_p2==3) {
+
+                        cout<<"Player 1 chose Rock while Player 2 chose Scissors! Player 1 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                     }
+                     if (move_p1==2 && move_p2==1) {
+
+                        cout<<"Player 1 chose Paper while Player 2 chose Rock! Player 1 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                     }
+                     if (move_p1==2 && move_p2==3) {
+
+                        cout<<"Player 1 chose Paper while Player 2 chose Scissors! Player 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+                     }
+
+                     if (move_p1==3 && move_p2==1) {
+
+                        cout<<"Player 1 chose Scissors while Player 2 chose Rock! Player 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                     }
+                     if (move_p1==3 && move_p2==2) {
+
+                        cout<<"Player 1 chose Scissors while Player 2 chose Paper! Player 1 wins.. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game2=true;
+                            score_p1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game2=false;
+
+                        }
+
+                     }
+
+                    }
+
+
+                        if (game==3) {
+
+                            Game3=true;
+
+                        }
+
+                            while (Game3==true) {
+
+                                    int move_cpu1= rand() % 2;
+                                    int move_cpu2= rand() % 2;
+
+                    cout<<"Welcome to Computer vs Computer! Type 1 to start: ";
+                    cin>>retry;
+                    if (retry==1) {
+
+
+                    cout<<"Score: "<<score_cpu1<<" - "<<score_cpu2<<"\n";
+
+                    move_cpu1= rand() % 2;
+                    move_cpu2= rand() % 2;
+
+                    if (move_cpu1==0 && move_cpu2==0) {
+
+                        cout<<"They both chose Rock! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                    }
+
+                        if (move_cpu1==1 && move_cpu2==1) {
+
+                        cout<<"They both chose Paper! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                    }
+
+                      if (move_cpu1==2 && move_cpu2==2) {
+
+                        cout<<"They both chose Scissors! It's a tie unfortunately. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                    }
+
+                     if (move_cpu1==0 && move_cpu2==1) {
+
+                        cout<<"Pc 1 chose Rock while Pc 2 chose Paper! Pc 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                    }
+
+
+                     if (move_cpu1==0 && move_cpu2==2) {
+
+                        cout<<"Pc 1 chose Rock while Pc 2 chose Scissors! Pc 1 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                     }
+                     if (move_cpu1==1 && move_cpu2==0) {
+
+                        cout<<"Pc 1 chose Paper while Pc 2 chose Rock! Pc 1 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                     }
+                     if (move_cpu1==1 && move_cpu1==2) {
+
+                        cout<<"Pc 1 chose Paper while Pc 2 chose Scissors! Pc 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+                     }
+
+                     if (move_cpu1==2 && move_cpu2==0) {
+
+                        cout<<"Pc 1 chose Scissors while Pc 2 chose Rock! Pc 2 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu2++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                     }
+                     if (move_cpu1==2 && move_cpu1==1) {
+
+                        cout<<"Pc 1 chose Scissors while Pc 2 chose Paper! Pc 1 wins. Type 1 to continue playing or 2 to stop: ";
+                        cin>>retry;
+                        cout<<"\n";
+                        cout<<"\n";
+
+                        if (retry==1) {
+
+                            Game3=true;
+                            score_cpu1++;
+
+                        }
+
+                        else if (retry==2) {
+
+                            Game3=false;
+
+                        }
+
+                     }
+
+                    }
+                            }
+
+
+                        if (game==4){
+
+
+                        cout<<"Bye :(\n";
+                        }
+
+                  cout<<"Thanks for playing! Made by Skye P.\n";
+
+    return 0;
+    }
+
+
+
